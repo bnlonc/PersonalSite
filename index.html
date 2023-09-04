@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ben Lonc</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <link rel="stylesheet" href="style/index.css">
+        <link rel="stylesheet" href="style/universal.css">
+        <script src="script/script.js"></script>
+    </head>
+    <body onload="onLoad()">
+        <div id="pageContainer">
+            <div id="header">
+                <div class="headerButton" id="resumeButton" onclick="gotoPage(event, 'html/resume.html', this.id)">
+                    <p>Résumé</p>
+                </div>
+                <div class="headerButton" id="portfolioButton" onclick="gotoPage(event, 'html/portfolio.html', this.id)">
+                    <p>Portfolio</p>
+                </div>
+                <div class="headerButton" id="personalProjectsButton" onclick="gotoPage(event, 'html/projects.html', this.id)">
+                    <p>Personal Projects</p>
+                </div>
+                <div class="headerButton" id="aboutButton" onclick="gotoPage(event, 'html/about.html', this.id)">
+                    <p>About</p>
+                </div>
+                <div class="headerButton" id="homeButton" onclick="gotoPage(event, 'html/home.html', this.id)">
+                    <p>Home</p>
+                </div>
+                <div id="headerFlash">
+                    <p>>$Ben Lonc</p>
+                </div>
+                
+                <div id="circleSlider"></div>
+            </div>
+    
+    
+            <iframe src="html/home.html" id="bodyFrame" title="Home Page"></iframe> 
+        </div>
+    </body>
+</html>
