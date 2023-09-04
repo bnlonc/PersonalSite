@@ -56,7 +56,11 @@ function onSliderCoverage(event) {
 
     circleSlider.removeEventListener(transitionEndEventName, onSliderCoverage);
 
-    document.getElementById("bodyFrame").src = event.currentTarget.destination;
+    let iframe = document.getElementById("bodyFrame");
+
+    iframe.remove();
+    iframe.src = event.currentTarget.destination;
+    document.getElementById("pageContainer").appendChild(iframe);
 
     buttonStyle = getComputedStyle(document.getElementById(event.currentTarget.buttonId));
 
@@ -68,9 +72,3 @@ function onSliderCoverage(event) {
         circleSlider.style.width = "0px";
     });
 }
-
-addEventListener("beforeunload", function() {
-    
-    document.getElementById("bodyFrame").attr('src', homeBodyDocument);
-
-});
