@@ -11,15 +11,14 @@
     height: 6%;
     width: 100%;
     font-family: Header; 
-    font-size: calc(1% + 0.5vh + 0.5vw);
-    /*background: var(--pseudoWhite);*/
+    font-size: calc(0.7vh + 0.7vw);
 }
 
 #headerFlash {
     position: relative;
     height: 100%;
-    width: 12%;
-    font-size: calc(1vh + 1vw);
+    width: 13%;
+    font-size: calc(1.2vh + 1.2vw);
     z-index: 1;
 }
 

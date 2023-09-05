@@ -1,6 +1,6 @@
 :root {
     --darkRed: #7F210C;
-    --lightRed: #D58C5B /*#A53820*/;
+    --lightRed: #D58C5B;
     --darkGreen: #276C1A;
     --lightGreen: #6A994E;
     --pseudoBlack: #000D2A;
@@ -22,6 +22,5 @@ body {
 
 @font-face {
     font-family: Header;
-    src: url(../fonts/ArupalaGrotesk-Ultra.ttf);
+    src: url(../fonts/Gilgan.otf);
 }
-
