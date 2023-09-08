@@ -1,0 +1,52 @@
+.bodyContent {
+    position: relative;
+    top: 10%;
+    display: block;
+    overflow: auto;
+    margin: 0 auto;
+    width: 40%;
+}
+
+.bodyContent > div {
+    float: left;
+}
+
+.bodyText {
+    text-align: center;
+}
+
+#topSection > .bodyText {
+    width: 70%;
+    margin-left: 5%;
+}
+
+#topSection > .bodyImages {
+    width: 25%;
+}
+
+#bottomSection > .bodyText {
+    width: 50%;
+    margin-right: 5%;
+}
+
+#bottomSection > .bodyImages {
+    width: 45%;
+}
+
+#bottomSection {
+    margin-top: 5%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5%;
+}
+
+h2 {
+    font-size: calc(0.8vh + 0.8vw);
+}
+
+p {
+    font-size: calc(0.6vh + 0.6vw);
+}

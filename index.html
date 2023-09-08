@@ -3,27 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <title>Ben Lonc</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.png">
-        <link rel="stylesheet" href="style/index.css">
-        <link rel="stylesheet" href="style/common.css">
-        <script src="script/script.js"></script>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="common.css">
+        <script src="index.js"></script>
     </head>
     <body onload="onLoad()">
         <div id="pageContainer">
             <div id="header">
-                <div class="headerButton" id="resumeButton" onclick="gotoPage(event, 'html/resume.html', this.id)">
+                <div class="headerButton" id="resumeButton" onclick="gotoPage(event, 'resume/resume.html', this.id)">
                     <p>Résumé</p>
                 </div>
-                <div class="headerButton" id="portfolioButton" onclick="gotoPage(event, 'html/portfolio.html', this.id)">
+                <div class="headerButton" id="portfolioButton" onclick="gotoPage(event, 'portfolio/portfolio.html', this.id)">
                     <p>Portfolio</p>
                 </div>
-                <div class="headerButton" id="personalProjectsButton" onclick="gotoPage(event, 'html/projects.html', this.id)">
+                <div class="headerButton" id="personalProjectsButton" onclick="gotoPage(event, 'projects/projects.html', this.id)">
                     <p>Personal Projects</p>
                 </div>
-                <div class="headerButton" id="aboutButton" onclick="gotoPage(event, 'html/about.html', this.id)">
+                <div class="headerButton" id="aboutButton" onclick="gotoPage(event, 'about/about.html', this.id)">
                     <p>About</p>
                 </div>
-                <div class="headerButton" id="homeButton" onclick="gotoPage(event, 'html/home.html', this.id)">
+                <div class="headerButton" id="homeButton" onclick="gotoPage(event, 'home/home.html', this.id)">
                     <p>Home</p>
                 </div>
                 <div id="headerFlash">
@@ -33,7 +33,7 @@
                 <div id="circleSlider"></div>
             </div>
     
-            <iframe src="html/home.html" id="bodyFrame"></iframe> 
+            <iframe src="home/home.html" id="bodyFrame"></iframe> 
         </div>
     </body>
 </html>
