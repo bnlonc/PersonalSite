@@ -13,14 +13,6 @@
     font-size: calc(0.7vh + 0.7vw);
 }
 
-#headerFlash {
-    position: relative;
-    height: 100%;
-    width: 13%;
-    font-size: calc(1.2vh + 1.2vw);
-    z-index: 1;
-}
-
 .headerButton {
     width: 7.5%;
     height: 100%;
@@ -34,7 +26,25 @@
     letter-spacing: 3px;
 }
 
-.headerButton > p, #headerFlash > p {
+#headerFlash {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    font-size: calc(1.2vh + 1.2vw);
+    z-index: 1;
+}
+
+#headerFlash > p {
+    text-align: left;
+    position: relative;
+    margin: 0;
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    transition: letter-spacing 0.3s 0s;
+}
+
+.headerButton > p {
     text-align: center;
     position: relative;
     margin: 0;

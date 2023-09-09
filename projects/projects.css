@@ -1,8 +1,68 @@
+#bodyContent {
+    height: 100%;
+    width: 100%;
+}
+
 #wallpapers {
-    margin-top: 5%;
+    position: relative;
     text-align: center;
+    height: 50%;
+}
+
+#wallpaperGallery {
+    height: 70%;
 }
 
 .wallpaperDisplay {
-    display: inline;
+    display: inline-block;
+    height: 100%;
+    margin-left: 2%;
+    margin-right: 2%;  
+    width: 20%;  
+    vertical-align: top;
+}
+
+a {
+    color: inherit;
+}
+
+h1 { 
+    margin: 0;
+    padding-top: 2%;
+}
+
+.wallpaperDisplay > a {
+    transition: letter-spacing 0.3s 0s;
+    font-weight: normal;
+}
+
+.wallpaperDisplay:hover > a {
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: calc(0.8vh + 0.8vw);
+}
+
+h3 {
+    font-size: calc(0.6vh + 0.6vw);
+    font-weight: normal;  
+    margin-bottom: 2%;
+}
+
+h4 {
+    margin-top: 3%;
+    margin-bottom: 0;
+    font-size: calc(0.65vh + 0.65vw);
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+img {
+    max-height: 70%;
+    border-radius: 5%;
 }

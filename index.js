@@ -17,10 +17,12 @@ function getTransitionEndEventName() {
     }
 }
 
-let transitionEndEventName;
 const sliderSpeed = "0.75s";
 const homeBodyDocument = "html/home.html";
+const headerBaseText = ">$ Ben Lonc / ";
+let transitionEndEventName;
 let circleSlider;
+let clickedButtonId;
 
 function onLoad() {
     transitionEndEventName = getTransitionEndEventName();
@@ -66,6 +68,9 @@ function onSliderCoverage(event) {
 
     document.getElementById("header").style.background = buttonStyle.getPropertyValue("background"); 
     document.getElementById("headerFlash").style.color = buttonStyle.getPropertyValue("color"); 
+
+    let headerText = headerBaseText + document.getElementById(circleSlider.buttonId).getElementsByTagName("p")[0].innerHTML;
+    document.getElementById("headerFlash").getElementsByTagName("p")[0].innerHTML = headerText;
 
     window.requestAnimationFrame(function(){
         circleSlider.style.height = "0px";
