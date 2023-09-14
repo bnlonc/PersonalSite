@@ -3,17 +3,17 @@
     width: 100%;
 }
 
-#wallpapers {
+.sectionContainer {
     position: relative;
     text-align: center;
     height: 50%;
 }
 
-#wallpaperGallery {
+.gallery {
     height: 70%;
 }
 
-.wallpaperDisplay {
+.projectDisplay {
     display: inline-block;
     height: 100%;
     margin-left: 2%;
@@ -27,16 +27,16 @@ a {
 }
 
 h1 { 
-    margin: 0;
+    margin: 0 0 1% 0;
     padding-top: 2%;
 }
 
-.wallpaperDisplay > a {
+.projectDisplay > a {
     transition: letter-spacing 0.3s 0s;
     font-weight: normal;
 }
 
-.wallpaperDisplay:hover > a {
+.projectDisplay:hover > a {
     font-weight: bolder;
     letter-spacing: 2px;
 }
@@ -49,6 +49,7 @@ h3 {
     font-size: calc(0.6vh + 0.6vw);
     font-weight: normal;  
     margin-bottom: 2%;
+    margin-top: 0;
 }
 
 h4 {
