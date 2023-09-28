@@ -17,8 +17,8 @@
     display: inline-block;
     height: 100%;
     margin-left: 2%;
-    margin-right: 2%;  
-    width: 20%;  
+    margin-right: 2%; 
+    width: 20%; 
     vertical-align: top;
 }
 
@@ -36,7 +36,7 @@ h1 {
     font-weight: normal;
 }
 
-.projectDisplay:hover > a {
+a:hover {
     font-weight: bolder;
     letter-spacing: 2px;
 }
@@ -69,5 +69,28 @@ a {
 
 img {
     max-height: 70%;
+    max-width: 100%;
     border-radius: 5%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .projectDisplay {
+        width: 40%;
+    }
+
+    .sectionContainer {
+        height: 40%;
+    }
+
+    #wallpapers {
+        top: 5%;
+    }
+
+    h1 {
+        font-size: calc(1.5vh + 1.5vw);
+    }
+
+    h3 {
+        font-size: calc(0.9vh + 0.9vw);
+    }
 }
