@@ -50,3 +50,17 @@ h2 {
 p {
     font-size: calc(0.6vh + 0.6vw);
 }
+
+@media (max-aspect-ratio: 1/1) {
+    .bodyContent {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: calc(1vh + 1vw);
+    }
+    
+    p {
+        font-size: calc(0.8vh + 0.8vw);
+    }
+}

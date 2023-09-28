@@ -106,6 +106,7 @@
 
     #headerFlash {
         height: 50%;
+        width: 100%;
         float: left;
         font-size: calc(1.6vh + 1.6vw);
     }
