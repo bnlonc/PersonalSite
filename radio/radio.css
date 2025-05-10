@@ -1,6 +1,6 @@
-#specialImage {
+#backgroundImage {
     background: url('grad.png'), var(--pseudoWhite);
-    background-size: 50%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: bottom;
