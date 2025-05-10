@@ -37,6 +37,7 @@ li {
 
 #topSection > .bodyImages {
     width: 25%;
+    float: left;
 }
 
 #bottomSection > .bodyText {

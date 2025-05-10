@@ -70,11 +70,11 @@
     color: var(--pseudoWhite);
 }
 
-#personalProjectsButton {
+#projectsButton {
     background: var(--lightRed);
 }
 
-#portfolioButton {
+#radioButton {
     background: var(--lightGreen);
 }
 

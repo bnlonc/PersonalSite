@@ -2,7 +2,9 @@
     --darkRed: #7F210C;
     --lightRed: #D58C5B;
     --darkGreen: #276C1A;
-    --lightGreen: #6A994E;
+    /* --lightGreen: #6A994E; */
+    --lightGreen: #BCCA5B;
+    --tealBlue: #4E7D99;
     --pseudoBlack: #000D2A;
     --pseudoWhite: #FAF2E1;
 }

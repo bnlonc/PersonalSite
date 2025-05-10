@@ -18,7 +18,6 @@ function getTransitionEndEventName() {
 }
 
 const sliderSpeed = "0.75s";
-const homeBodyDocument = "html/home.html";
 const headerBaseText = ">$ Ben Lonc / ";
 let transitionEndEventName;
 let circleSlider;

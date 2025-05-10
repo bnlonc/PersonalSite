@@ -1,0 +1,66 @@
+#specialImage {
+    background: url('grad.png'), var(--pseudoWhite);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: bottom;
+    background-attachment: fixed;
+}
+
+#bodyContent {
+    text-align: center;
+    width: 40%;
+    margin-bottom: 0;
+    position: relative;
+    left: 30%;
+    margin-top: 2%;
+    /* border: 1px solid var(--pseudoBlack); */
+}
+
+.section {
+    border: 2px solid var(--pseudoBlack);
+    border-radius: 1% / 7%;
+    overflow: hidden;
+    margin: 4% 0%;
+}
+
+.section > p, .section > h4 {
+    text-align: left;
+    padding: 0% 4%;
+    font-size: calc(0.45vh + 0.45vw);
+}
+
+#general > h2 {
+    color: var(--pseudoWhite);
+    background-color: var(--darkGreen);
+}
+
+#cw > h2 {
+    color: var(--pseudoBlack);
+    background-color: var(--lightGreen);
+}
+
+#digital > h2 {
+    color: var(--pseudoBlack);
+    background-color: var(--lightRed);
+}
+
+#satellite > h2 {
+    color: var(--pseudoWhite);
+    background-color: var(--darkRed);
+}
+
+h2 {
+    margin: 0;
+    padding: 2% 4%;
+    text-align: left;
+    font-size: calc(0.85vh + 0.85vw);
+}
+
+h3 {
+    font-size: calc(0.75vh + 0.75vw);
+}
+
+h4 {
+    font-size: calc(0.65vh + 0.65vw);
+}
