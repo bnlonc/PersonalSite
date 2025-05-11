@@ -26,6 +26,10 @@ let clickedButtonId;
 function onLoad() {
     transitionEndEventName = getTransitionEndEventName();
     circleSlider = document.getElementById("circleSlider");
+
+    Array.from(document.getElementsByClassName("headerButton")).forEach((element) => {
+        element.style.display = "block";
+    });
 }
 
 function gotoPage(event, destination, buttonId) {

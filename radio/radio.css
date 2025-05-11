@@ -1,5 +1,5 @@
 #backgroundImage {
-    background: url('grad.png'), var(--pseudoWhite);
+    background: url('images/grad.png'), var(--pseudoWhite);
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position-x: left;
@@ -14,7 +14,6 @@
     position: relative;
     left: 30%;
     margin-top: 2%;
-    /* border: 1px solid var(--pseudoBlack); */
 }
 
 .section {

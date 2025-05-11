@@ -56,6 +56,10 @@
     position: relative;
 }
 
+div.headerButton {
+    display: none;
+}
+
 .headerButton:hover > p {
     font-weight: bolder;
     letter-spacing: 3px;
@@ -63,6 +67,7 @@
 
 #homeButton {
     background: var(--pseudoWhite);
+    color: var(--pseudoBlack);
 }
 
 #aboutButton {
@@ -72,10 +77,12 @@
 
 #projectsButton {
     background: var(--lightRed);
+    color: var(--pseudoBlack);
 }
 
 #radioButton {
     background: var(--lightGreen);
+    color: var(--pseudoBlack);
 }
 
 #resumeButton {

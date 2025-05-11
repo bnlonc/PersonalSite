@@ -26,11 +26,6 @@ a {
     color: inherit;
 }
 
-.projectDisplay > a {
-    transition: letter-spacing 0.3s 0s;
-    font-weight: normal;
-}
-
 a:hover {
     font-weight: bolder;
     letter-spacing: 2px;
@@ -56,8 +51,9 @@ h4 {
 }
 
 a {
+    transition: letter-spacing 0.3s 0s;
+    font-weight: normal;
     text-decoration: none;
-    
 }
 
 img {
