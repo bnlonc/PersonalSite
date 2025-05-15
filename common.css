@@ -1,11 +1,12 @@
 :root {
-    --darkRed: #7F210C;
-    --lightRed: #D58C5B;
-    --darkGreen: #276C1A;
-    --lightGreen: #DFCD69;
-    --tealBlue: #4E7D99;
-    --pseudoBlack: #000D2A;
-    --pseudoWhite: #FAF2E1;
+    --red: #7F210C;
+    --peach: #D58C5B;
+    --green: #276C1A;
+    --yellow: #DFCD69;
+    --teal: #649EBF;
+    --grey: #BFBFBF;
+    --offBlack: #000D2A;
+    --offWhite: #FAF2E1;
 }
 
 body {
@@ -13,9 +14,9 @@ body {
     height: 100%;
     width: 100%;
     margin: 0 0;
-    background: var(--pseudoWhite);
+    background: var(--offWhite);
     font-family: Header; 
-    color: var(--pseudoBlack);
+    color: var(--offBlack);
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */

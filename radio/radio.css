@@ -1,5 +1,5 @@
 #backgroundImage {
-    background: url('images/grad.png'), var(--pseudoWhite);
+    background: url('images/grad.png'), var(--offWhite);
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position-x: left;
@@ -13,40 +13,62 @@
     margin-bottom: 0;
     position: relative;
     left: 30%;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .section {
-    border: 2px solid var(--pseudoBlack);
-    border-radius: 1% / 7%;
+    border: 2px solid var(--offBlack);
+    border-radius: 20px;
     overflow: hidden;
     margin: 4% 0%;
 }
 
-.section > p, .section > h4 {
+.section > *:not(h2) {
     text-align: left;
     padding: 0% 4%;
     font-size: calc(0.45vh + 0.45vw);
+    list-style-type: square;
+}
+
+#gear > h2 {
+    color: var(--offWhite);
+    background-color: var(--red);
+}
+
+li {
+    margin: 1% 0;
+}
+
+#aptloop > img {
+    margin: 1% 0;
+    border-radius: 20px;
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+#aptloop > p {
+    margin: 0%;
 }
 
 #general > h2 {
-    color: var(--pseudoWhite);
-    background-color: var(--darkGreen);
+    color: var(--offBlack);
+    background-color: var(--peach);
 }
 
 #cw > h2 {
-    color: var(--pseudoBlack);
-    background-color: var(--lightGreen);
+    color: var(--offBlack);
+    background-color: var(--yellow);
 }
 
 #digital > h2 {
-    color: var(--pseudoBlack);
-    background-color: var(--lightRed);
+    color: var(--offWhite);
+    background-color: var(--green);
 }
 
 #satellite > h2 {
-    color: var(--pseudoWhite);
-    background-color: var(--darkRed);
+    color: var(--offBlack);
+    background-color: var(--teal);
 }
 
 h2 {
@@ -57,6 +79,7 @@ h2 {
 }
 
 h3 {
+    padding-bottom: 2%;
     font-size: calc(0.75vh + 0.75vw);
 }
 

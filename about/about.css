@@ -51,6 +51,7 @@ li {
 
 #bottomSection {
     margin-top: 5%;
+    padding-bottom: 2%;
 }
 
 @media (max-aspect-ratio: 1/1) {

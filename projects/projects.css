@@ -1,5 +1,4 @@
 #bodyContent {
-    height: 100%;
     width: 100%;
 }
 
@@ -15,7 +14,6 @@
 
 .projectDisplay {
     display: inline-block;
-    height: 100%;
     margin-left: 2%;
     margin-right: 2%; 
     width: 20%; 

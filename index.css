@@ -66,28 +66,28 @@ div.headerButton {
 }
 
 #homeButton {
-    background: var(--pseudoWhite);
-    color: var(--pseudoBlack);
+    background: var(--offWhite);
+    color: var(--offBlack);
 }
 
 #aboutButton {
-    background: var(--darkRed);
-    color: var(--pseudoWhite);
+    background: var(--red);
+    color: var(--offWhite);
 }
 
 #projectsButton {
-    background: var(--lightRed);
-    color: var(--pseudoBlack);
+    background: var(--peach);
+    color: var(--offBlack);
 }
 
 #radioButton {
-    background: var(--lightGreen);
-    color: var(--pseudoBlack);
+    background: var(--yellow);
+    color: var(--offBlack);
 }
 
 #resumeButton {
-    background: var(--darkGreen);
-    color: var(--pseudoWhite);
+    background: var(--green);
+    color: var(--offWhite);
 }
 
 #circleSlider {
@@ -102,7 +102,7 @@ div.headerButton {
 
 #bodyFrame {
     width: 100%;
-    height: 100%;
+    height: 94%;
     border: 0;
 }
 
