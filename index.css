@@ -111,11 +111,15 @@ div.headerButton {
         height: 10%;
     }
 
+    #bodyFrame {
+        height: 90%;
+    }
+
     #headerFlash {
         height: 50%;
         width: 100%;
         float: left;
-        font-size: calc(1.6vh + 1.6vw);
+        font-size: calc(1.7vh + 1.7vw);
     }
 
     #menuBar {
@@ -124,6 +128,6 @@ div.headerButton {
         float: left;
         height: 50%;
         width: 100%;
-        font-size: calc(1.1vh + 1.1vw);
+        font-size: calc(1.3vh + 1.3vw);
     }
 }

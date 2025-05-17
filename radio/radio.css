@@ -21,6 +21,7 @@
     border-radius: 20px;
     overflow: hidden;
     margin: 4% 0%;
+    background-color: var(--offWhite);
 }
 
 .section > *:not(h2) {
@@ -40,14 +41,14 @@ li {
 }
 
 #aptloop > img {
-    margin: 1% 0;
+    margin: 1% 2%;
     border-radius: 20px;
-    width: 50%;
-    position: relative;
-    left: 25%;
+    width: 45%;
+    /* position: relative;
+    left: 5%; */
 }
 
-#aptloop > p {
+#aptloop > p { 
     margin: 0%;
 }
 
@@ -85,4 +86,31 @@ h3 {
 
 h4 {
     font-size: calc(0.65vh + 0.65vw);
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #bodyContent {
+        text-align: center;
+        width: 80%;
+        margin-bottom: 0;
+        position: relative;
+        left: 10%;
+        margin-top: 1%;
+    }
+
+    h2 {
+        font-size: calc(1.8vh + 1.8vw);
+    }
+    
+    h3 {
+        font-size: calc(1.5vh + 1.5vw);
+    }
+
+    h4 {
+        font-size: calc(1.2vh + 1.2vw);
+    }
+
+    .section > *:not(h2) {
+        font-size: calc(1.05vh + 1.05vw);
+    }
 }
