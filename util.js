@@ -1,3 +1,5 @@
+import { setTheme, currentTheme } from "./themes.js";
+
 export const sliderSpeed = 0.75;
 
 // Find out what the user's browser calls CSS transition-end events for browser compatibility. 

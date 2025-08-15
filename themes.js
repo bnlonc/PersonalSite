@@ -19,21 +19,7 @@ export const Themes = {
     }, 
 };
 
-let currentTheme = Themes.LIGHT;
-
-export function setTheme(theme) {
-    currentTheme = theme;
-    applyCurrentTheme();
-}
-
-export function applyCurrentTheme() {
-    applyTheme(currentTheme);
-}
-
-export function applyTheme(theme) {
-    document.getElementById("themeSheet").setAttribute("href", theme.topLevelReference);
-    document.getElementById("bodyFrame").contentDocument.getElementById("themeSheet").setAttribute("href", theme.iframeReference);
-}
+export let currentTheme = Themes.LIGHT;
 
 function toggleTheme() {
     if (currentTheme === Themes.LIGHT) {
@@ -41,6 +27,16 @@ function toggleTheme() {
     } else {
         setTheme(Themes.LIGHT);
     }    
+}
+
+export function setTheme(theme) {
+    currentTheme = theme;
+    applyTheme(currentTheme);
+}
+
+export function applyTheme(theme) {
+    document.getElementById("themeSheet").setAttribute("href", theme.topLevelReference);
+    document.getElementById("bodyFrame").contentDocument.getElementById("themeSheet").setAttribute("href", theme.iframeReference);
 }
 
 export function onThemeButtonClick(event, buttonId) {

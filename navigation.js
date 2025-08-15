@@ -1,4 +1,4 @@
-import { applyCurrentTheme } from "./themes.js";
+import { currentTheme } from "./themes.js";
 import { 
     circleSlider, 
     requestCircleSliderGrowAnimation, 
@@ -17,13 +17,12 @@ export function gotoPage(event, destination, buttonId) {
     circleSlider.addEventListener(transitionEndEventName, onSliderCoverage);
 }
 
+export let lastClickedButtonId = "homeButton";
 const iframe = document.getElementById("bodyFrame");
 iframe.addEventListener('load', onIframeLoad);
 
-export let lastClickedButtonId = "homeButton";
-
 function onSliderCoverage(event) {
-
+    
     circleSlider.removeEventListener(transitionEndEventName, onSliderCoverage);
 
     iframe.src = event.currentTarget.destination;
@@ -38,9 +37,13 @@ function onSliderCoverage(event) {
     document.getElementById("headerFlash").firstElementChild.innerHTML = headerText;
 
     requestCircleSliderShrinkAnimation(circleSlider);
-    applyCurrentTheme();
 }
 
 function onIframeLoad() {
-    applyCurrentTheme();
+    const stylesheet = document.createElement("link");
+    stylesheet.id = "themeSheet";
+    stylesheet.rel = "stylesheet";
+    stylesheet.type = "text/css";
+    stylesheet.href = currentTheme.iframeReference;
+    iframe.contentWindow.document.head.appendChild(stylesheet);
 }

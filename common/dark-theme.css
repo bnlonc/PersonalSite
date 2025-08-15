@@ -50,16 +50,3 @@ a {
     font-weight: normal;
     src: url(fonts/Parisienne2.ttf);
 }
-
-/* @font-face {
-    font-family: Body;
-    size-adjust: 135%;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 85%;
-    src: 
-        url(fonts/Dotcirful.otf),
-        url(fonts/DotcirfulBold.otf),
-        url(fonts/DotcirfulItalic.otf),
-        url(fonts/DotcirfulBoldItalic.otf);
-} */
