@@ -4,59 +4,86 @@
         <meta charset="UTF-8">
         <title>Ben Lonc</title>
         <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="stylesheet" href="common/common.css">
+        <link rel="stylesheet" href="common/light-theme.css" id="themeSheet">
         <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="common.css">
-        <script src="index.js"></script>
+        <script type="module" src="index.js"></script>
+        <noscript>
+            <style>
+                .hideOnJavascriptDisabled {
+                    display: none;
+                }
+            </style>
+        </noscript>
     </head>
-    <body onload="onLoad()">
+    <body onload="topLevelStartup()">
         <div id="pageContainer">
             <div id="header">
                 <div id="menuBar">
-                    <div class="headerButton" id="resumeButton" onclick="gotoPage(event, 'resume/', this.id)">
-                        <p>Résumé</p>
+                    <div class="headerButton hideOnJavascriptDisabled" 
+                            id="themeButton" 
+                            onclick="onThemeButtonClick(event, this.id)" 
+                            style="background-color: var(--accent-colour-5); color: var(--text-colour-5)">
+                        <h4>Theme</h4>
                     </div>
-                    <div class="headerButton" id="radioButton" onclick="gotoPage(event, 'radio/', this.id)">
-                        <p>Radio</p>
+                    <div class="headerButton hideOnJavascriptDisabled" 
+                            id="resumeButton" 
+                            onclick="gotoPage(event, 'resume/', this.id)" 
+                            style="background-color: var(--accent-colour-4); color: var(--text-colour-4)">
+                        <h4>Resume</h4>
                     </div>
-                    <div class="headerButton" id="projectsButton" onclick="gotoPage(event, 'projects/', this.id)">
-                        <p>Projects</p>
+                    <div class="headerButton hideOnJavascriptDisabled" 
+                            id="radioButton" 
+                            onclick="gotoPage(event, 'radio/', this.id)" 
+                            style="background-color: var(--accent-colour-3); color: var(--text-colour-3)">
+                        <h4>Radio</h4>
                     </div>
-                    <div class="headerButton" id="aboutButton" onclick="gotoPage(event, 'about/', this.id)">
-                        <p>About</p>
+                    <div class="headerButton hideOnJavascriptDisabled" 
+                            id="projectsButton" 
+                            onclick="gotoPage(event, 'projects/', this.id)" 
+                            style="background-color: var(--accent-colour-2); color: var(--text-colour-2)">
+                        <h4>Projects</h4>
                     </div>
-                    <div class="headerButton" id="homeButton" onclick="gotoPage(event, 'home/', this.id)">
-                        <p>Home</p>
+                    <div class="headerButton hideOnJavascriptDisabled" 
+                            id="aboutButton" 
+                            onclick="gotoPage(event, 'about/', this.id)" 
+                            style="background-color: var(--accent-colour-1); color: var(--text-colour-1)">
+                        <h4>About</h4>
+                    </div>
+                    <div class="headerButton hideOnJavascriptDisabled" 
+                            id="homeButton" 
+                            onclick="gotoPage(event, 'home/', this.id)" 
+                            style="background-color: var(--background-colour); color: var(--foreground-colour)">
+                        <h4>Home</h4>
                     </div>
                     <noscript>
                         <a href="resume/">
                             <span class="headerButton" id="resumeButton">
-                                <p>Résumé</p>
+                                <h4>Resume</h4>
                             </span>
                         </a>
                         <a href="radio/">
                             <span class="headerButton" id="radioButton">
-                                <p>Radio</p>
+                                <h4>Radio</h4>
                             </span>
                         </a>
                         <a href="projects/">
                             <span class="headerButton" id="projectsButton">
-                                <p>Projects</p>
+                                <h4>Projects</h4>
                             </span>
                         </a>
                         <a href="about/">
                             <span class="headerButton" id="aboutButton">
-                                <p>About</p>
+                                <h4>About</h4>
                             </span>
                         </a>
-                        <a href="home/">
-                            <span class="headerButton" id="homeButton">
-                                <p>Home</p>
-                            </span>
-                        </a>
+                        <span class="headerButton" id="homeButton">
+                            <h4>Home</h4>
+                        </span>
                     </noscript>
                 </div>
                 <div id="headerFlash">
-                    <p>>$ Ben Lonc / Home</p>
+                    <h2>>$ Ben Lonc / Home</h2>
                 </div>
                 
                 <div id="circleSlider"></div>

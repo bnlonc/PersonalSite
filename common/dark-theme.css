@@ -1,0 +1,65 @@
+:root {
+    --foreground-colour: rgb(255, 255, 255);
+    --background-colour: rgb(31, 31, 43);
+    
+    --accent-colour-1: rgb(46, 8, 107);
+    --text-colour-1: var(--foreground-colour);
+    
+    --accent-colour-2: rgb(0, 33, 122);
+    --text-colour-2: var(--foreground-colour);
+    
+    --accent-colour-3: rgb(6, 116, 124);
+    --text-colour-3: var(--foreground-colour);
+    
+    --accent-colour-4: rgb(0, 82, 44);
+    --text-colour-4: var(--foreground-colour);
+    
+    --accent-colour-5: rgb(110, 110, 110);
+    --text-colour-5: var(--foreground-colour);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 120%;
+    font-family: Header;
+}
+
+p {
+    line-height: 140%;
+}
+
+a {
+    color: rgb(158, 158, 255);
+}
+
+.dynamicIcon {
+    filter: invert() brightness(0.8);
+}
+
+@font-face {
+    font-family: Header;
+    size-adjust: 165%; 
+    font-style: italic;
+    src: url(fonts/Parisienne2.ttf);
+}
+
+@font-face {
+    font-family: Body;
+    size-adjust: 145%;
+    font-style: normal;
+    font-weight: normal;
+    src: url(fonts/Parisienne.ttf);
+}
+
+/* @font-face {
+    font-family: Body;
+    size-adjust: 135%;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 85%;
+    src: 
+        url(fonts/Dotcirful.otf),
+        url(fonts/DotcirfulBold.otf),
+        url(fonts/DotcirfulItalic.otf),
+        url(fonts/DotcirfulBoldItalic.otf);
+} */

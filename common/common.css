@@ -1,0 +1,33 @@
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 1.65rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0 0;
+    background: var(--background-colour);
+    font-family: Body; 
+    font-size: 1.3rem;
+    color: var(--foreground-colour);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}

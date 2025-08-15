@@ -1,28 +1,27 @@
 #pageContainer {
     position: relative; 
-    width: 100%;
     height: 100%; 
+    width: 100%;
     overflow: hidden;
 }
 
 #header {
     position: relative;
-    z-index: 3;
     height: 6%;
     width: 100%;
+    z-index: 3;
 }
 
 #headerFlash {
     position: relative;
     height: 100%;
-    width: 60%;
-    font-size: calc(1.2vh + 1.2vw);
+    width: 50%;
     z-index: 1;
 }
 
-#headerFlash > p {
-    text-align: left;
+#headerFlash > h2 {
     position: relative;
+    text-align: left;
     margin: 0;
     top: 50%;
     left: 51%;
@@ -34,13 +33,20 @@
     position: relative;
     float: right;
     height: 100%; 
-    width: 37.5%;
-    font-size: calc(0.7vh + 0.7vw);
+    width: 50%;
 }
 
-.headerButton > p {
-    text-align: center;
+.headerButton {
     position: relative;
+    width: calc(100% / 6);
+    height: 100%;
+    float: right;
+    z-index: 3;
+}
+
+.headerButton > * {
+    position: relative;
+    text-align: center;
     margin: 0;
     top: 50%;
     left: 50%;
@@ -48,46 +54,33 @@
     transition: letter-spacing 0.3s 0s;
 }
 
-.headerButton {
-    width: 20%;
-    height: 100%;
-    float: right;
-    z-index: 3;
-    position: relative;
-}
-
-div.headerButton {
-    display: none;
-}
-
-.headerButton:hover > p {
+.headerButton:hover > * {
     font-weight: bolder;
-    letter-spacing: 3px;
 }
 
 #homeButton {
-    background: var(--offWhite);
-    color: var(--offBlack);
+    background: var(--background-colour);
+    color: var(--foreground-colour);
 }
 
 #aboutButton {
-    background: var(--red);
-    color: var(--offWhite);
+    background: var(--accent-colour-1);
+    color: var(--text-colour-1);
 }
 
 #projectsButton {
-    background: var(--peach);
-    color: var(--offBlack);
+    background: var(--accent-colour-2);
+    color: var(--text-colour-2);
 }
 
 #radioButton {
-    background: var(--yellow);
-    color: var(--offBlack);
+    background: var(--accent-colour-3);
+    color: var(--text-colour-3);
 }
 
 #resumeButton {
-    background: var(--green);
-    color: var(--offWhite);
+    background: var(--accent-colour-4);
+    color: var(--text-colour-4);
 }
 
 #circleSlider {
@@ -119,7 +112,6 @@ div.headerButton {
         height: 50%;
         width: 100%;
         float: left;
-        font-size: calc(1.7vh + 1.7vw);
     }
 
     #menuBar {
@@ -128,6 +120,5 @@ div.headerButton {
         float: left;
         height: 50%;
         width: 100%;
-        font-size: calc(1.3vh + 1.3vw);
     }
 }

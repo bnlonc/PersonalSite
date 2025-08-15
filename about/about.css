@@ -5,6 +5,7 @@
     overflow: auto;
     margin: 0 auto;
     width: 40%;
+    font-family: Body;
 }
 
 .bodyContent > div {
@@ -13,17 +14,12 @@
 
 .bodyText {
     text-align: center;
-    font-size: calc(0.6vh + 0.6vw);
 }
 
 img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 5%;
-}
-
-h2 {
-    font-size: calc(0.8vh + 0.8vw);
 }
 
 li {
@@ -57,13 +53,5 @@ li {
 @media (max-aspect-ratio: 1/1) {
     .bodyContent {
         width: 80%;
-    }
-
-    h2 {
-        font-size: calc(1vh + 1vw);
-    }
-    
-    p {
-        font-size: calc(0.8vh + 0.8vw);
     }
 }

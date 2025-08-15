@@ -1,5 +1,4 @@
 #bodyContent {
-    font-family: Header; 
     text-align: center;
     position: relative;
     top: 30%;
@@ -10,17 +9,14 @@
 }
 
 h1 {
-    font-size: calc(2.2vh + 2.2vw);
     margin-top: 0%;
 }
 
 h2 {
-    font-size: calc(0.9vh + 0.9vw);
     margin-top: 0.6%;
 }
 
 h3 {
-    font-size: calc(0.7vh + 0.7vw);
     margin-top: 0.8%;
 }
 

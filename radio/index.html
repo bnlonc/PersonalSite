@@ -2,8 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="../common/common.css">
+        <link rel="stylesheet" href="../common/light-theme.css" id="themeSheet">
         <link rel="stylesheet" href="radio.css">
-        <link rel="stylesheet" href="../common.css">
     </head>
     <body id="backgroundImage">
         <div id="bodyContent">
@@ -12,70 +13,70 @@
             <h4>As I gain skills, experience, and equipment, I'll add resources and info that were helpful to me to this page.</h4>
             
             <div class="section" id="gear">
-                <h2>Current Station</h2>
+                <h3>Current Station</h3>
                 <p><i>Not much of a station per se, but I'm working on it lol</i></p>
                 <ul>
                     <li>
-                        RTL-SDR Blog v3: Highly affordable and highly recommended. Get the kit that includes the telescoping dipole. Available on Amazon or on <a href="https://www.rtl-sdr.com">rtl-sdr.com</a>. Works for HF in a pinch, but far from ideal.
+                        - RTL-SDR Blog v3: Highly affordable and highly recommended. Get the kit that includes the telescoping dipole. Available on Amazon or on <a href="https://www.rtl-sdr.com">rtl-sdr.com</a>. Works for HF in a pinch, but far from ideal.
                         <ul>
-                            <li><a href="https://www.rtl-sdr.com/product/rtl-sdr-blog-wideband-lna-bias-tee-powered/">RTL-SDR Blog Low-Noise Amp</a>: This amp has definitely helped me get more out of my RTL-SDR. Well-recommended.</li>
-                            <li><a href="https://www.rtl-sdr.com/product/rtl-sdr-blog-broadcast-fm-band-stop-filter/">RTL-SDR Blog FM Band-Stop Filter</a>: This filter works as advertised, blocking out broadcast FM. This hasn't done much for me so far, as I don't really have issues with FM overloading the SDR.</li>
+                            <li>- <a href="https://www.rtl-sdr.com/product/rtl-sdr-blog-wideband-lna-bias-tee-powered/">RTL-SDR Blog Low-Noise Amp</a>: This amp has definitely helped me get more out of my RTL-SDR. Well-recommended.</li>
+                            <li>- <a href="https://www.rtl-sdr.com/product/rtl-sdr-blog-broadcast-fm-band-stop-filter/">RTL-SDR Blog FM Band-Stop Filter</a>: This filter works as advertised, blocking out broadcast FM. This hasn't done much for me so far, as I don't really have issues with FM overloading the SDR.</li>
                         </ul>
                     </li>
                     <li>
-                        Baofeng AR-5RM: A cheap handheld transciever that has worked well for me on my local repeater. I've also been able to pick up some air band communications on it. The FM band-stop filter and the dipole that came with the RTL-SDR can also work (for RX only!) with this radio.
+                        - Baofeng AR-5RM: A cheap handheld transciever that has worked well for me on my local repeater. I've also been able to pick up some air band communications on it. The FM band-stop filter and the dipole that came with the RTL-SDR can also work (for RX only!) with this radio.
                         <ul>
-                            <li>Diamond RH77CA replacement whip: A higher-quality antenna than the one that comes standard on the Baofeng, but not enough of an improvement for this radio to justify the cost. Still, it's good to have around to attach to another HT later down the line.</li>
+                            <li>- Diamond RH77CA replacement whip: A higher-quality antenna than the one that comes standard on the Baofeng, but not enough of an improvement for this radio to justify the cost. Still, it's good to have around to attach to another HT later down the line.</li>
                         </ul>
                     </li>
                     <li>
-                        AirSpy HF+ Discovery: A large step up over the RTL-SDR, especially on HF. It's much more expensive, but I recommend it for anyone looking into tinkering with antennas and listening below 30 MHz. 
+                        - AirSpy HF+ Discovery: A large step up over the RTL-SDR, especially on HF. It's much more expensive, but I recommend it for anyone looking into tinkering with antennas and listening below 30 MHz. 
                     </li>
                     <li>
-                        Bencher BY-1: A solid morse code paddle on the more affordable end, especially when you get it secondhand. I was able to set it up to work comfortably for me with the adjustment tool that attaches to the bottom. Get one used on eHam classifieds, HamEstate, or eBay. 
+                        - Bencher BY-1: A solid morse code paddle on the more affordable end, especially when you get it secondhand. I was able to set it up to work comfortably for me with the adjustment tool that attaches to the bottom. Get one used on eHam classifieds, HamEstate, or eBay. 
                     </li>
                     <li>
-                        LogiKey K3: A CW keyer that I use to practice sending. It has a few issues, including that the paddle input is 3.5mm instead of the standard 1/4", and that there's no battery or volume adjustment built in. However, it has all the features I've needed and has worked well for me so far. Again, get it used. The user interface is operated by sending and receiving morse code to the device, which is a pretty neat feature.
+                        - LogiKey K3: A CW keyer that I use to practice sending. It has a few issues, including that the paddle input is 3.5mm instead of the standard 1/4", and that there's no battery or volume adjustment built in. However, it has all the features I've needed and has worked well for me so far. Again, get it used. The user interface is operated by sending and receiving morse code to the device, which is a pretty neat feature.
                     </li>
                     <li id="aptloop">
-                        <p>The apartment loop: I put together a basic compromise loop antenna for HF by hanging a loop of wire around the perimeter of my apartment at the ceiling and tuning it to resonate on 20m. It settled at a total length of approximately 20.96m. I've been able to receive CW, SSB, and FT8 on 40m and 20m with it, but more iteration and RF exposure calculations are required before I can try any TX on it.</p>
+                        <p>- The apartment loop: I put together a basic compromise loop antenna for HF by hanging a loop of wire around the perimeter of my apartment at the ceiling and tuning it to resonate on 20m. It settled at a total length of approximately 20.96m. I've been able to receive CW, SSB, and FT8 on 40m and 20m with it, but more iteration and RF exposure calculations are required before I can try any TX on it.</p>
                         <img src="images/aptloop.jpg">
                         <img src="images/aptlooprender.png">
                     </li>
                     <li>
-                        MLA-30+ Receiving Loop: This active loop works okay for receiving, but can't transmit. It's affordable and does HF/shortwave listening well enough, but I'd recommend trying your hand at building a homebrew loop before you go out and buy one. 
+                        - MLA-30+ Receiving Loop: This active loop works okay for receiving, but can't transmit. It's affordable and does HF/shortwave listening well enough, but I'd recommend trying your hand at building a homebrew loop before you go out and buy one. 
                     </li>
                 </ul>
             </div>
 
             <div class="section" id="general">
-                <h2>General Reference</h2>
+                <h3>General Reference</h3>
                 <p><a href="https://hamstudy.org/">HamStudy.org</a>: My go-to resource for studying for the FCC exams. The Technician course got me a perfect score on the Technician license exam, and I'm currently using the study mode to prep for the General exam.</p>
                 <p><a href="https://www.youtube.com/@COASTALWAVESWIRES">COASTAL WAVES & WIRES (K4OGO) on YouTube</a>: A good channel for info on all kinds of antennas, especially for HF. Doesn't cover much in the realm of antennas for small spaces, but good for getting an idea of what's possible.</p>
                 <p><a href="https://k7mem.com/Misc_Band_Plan.html">K7MEM's interactive amateur band plan</a>: My usual reference for getting oriented on the bands, since it includes all the info I need in a more visual format.</p>
             </div>
 
             <div class="section" id="cw">
-                <h2>CW</h2>
-                <h4>Learning</h4>
+                <h3>CW</h3>
+                <h5>Learning</h5>
                 <p><a href="https://lcwo.net/">LCWO.net</a>: An excellent site for CW drills. I found the Koch method course challenging, but I'm improving my copying skills a lot by just sticking with it and repeating each lesson until the new characters stick.</p>
-                <h4>Gear</h4>
+                <h5>Gear</h5>
                 <p><a href="https://www.youtube.com/@Utahforrest">UtahForrest (KI7QCF) on YouTube</a>: A good source for advice on choosing equipment and getting set up as a beginner.</p>
             </div>  
 
             <div class="section" id="digital">
-                <h2>Digital Decoding</h2>
+                <h3>Digital Decoding</h3>
                 <p><a href="https://www.radioreference.com/db/">RadioReference Database</a>: A database of radio systems and frequencies broken down by location. Good for finding something to decode or identifying a control channel you find.</p>
                 <p><a href="https://github.com/DSheirer/sdrtrunk">SDRTrunk</a>: An open-source app for decoding trunked digital systems.</p>
 
             </div>
 
             <div class="section" id="satellite">
-                <h2>Satellite Work</h2>
+                <h3>Satellite Work</h3>
                 <p><a href="https://www.youtube.com/saveitforparts">SaveItForParts on YouTube</a>: A YouTube channel with beginner-friendly tutorials on setting up an RTL-SDR to receive and decode weather satellite transmissions.</p>
             </div>
 
-            <h3>73 de N7BNL</h3>
+            <h4>73 de N7BNL</h4>
         </div>
     </body>
 </html>
