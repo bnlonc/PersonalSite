@@ -38,6 +38,7 @@ function onSliderCoverage(event) {
     document.getElementById("headerFlash").firstElementChild.innerHTML = headerText;
 
     requestCircleSliderShrinkAnimation(circleSlider);
+    applyCurrentTheme();
 }
 
 function onIframeLoad() {
