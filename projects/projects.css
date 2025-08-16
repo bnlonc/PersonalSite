@@ -37,10 +37,6 @@ h4 {
     font-family: Body;
 }
 
-.border {
-    border: 1px solid black;
-}
-
 a {
     transition: letter-spacing 0.3s 0s;
     font-weight: normal;
@@ -50,7 +46,6 @@ a {
 img {
     max-height: 70%;
     max-width: 100%;
-    border-radius: 5%;
 }
 
 @media (max-aspect-ratio: 1/1) {
