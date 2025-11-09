@@ -1,3 +1,17 @@
+[data-theme="light"] {
+    #topLine {
+        background: var(--accent-colour-2);
+        color: var(--text-colour-2);
+    }
+}
+
+[data-theme="dark"] {
+    #topLine {
+        background: var(--accent-colour-2);
+        color: var(--text-colour-2);
+    }
+}
+
 .bodyContent {
     position: relative;
     top: 10%;
@@ -5,7 +19,6 @@
     overflow: auto;
     margin: 0 auto;
     width: 40%;
-    font-family: Body;
 }
 
 .bodyContent > div {
@@ -50,7 +63,7 @@ li {
     padding-bottom: 2%;
 }
 
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 1/0.8) {
     .bodyContent {
         width: 80%;
     }

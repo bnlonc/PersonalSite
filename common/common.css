@@ -1,3 +1,35 @@
+:root {
+    --adaptive-shift-ratio: 1/1;
+}
+
+header {
+    height: 6%;
+}
+
+#navbar {
+    float: right;
+    height: 100%;
+    width: 55%;
+    border: 0;
+}
+
+#topLine {
+    float: left;
+    width: 45%;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+#topLine > h2 {
+    position: relative;
+    margin: 0 0 0 2%;
+    height: fit-content;
+    top: 50%;
+    transform: translate(0%, -50%);
+    white-space: nowrap;
+    width: fit-content;
+}
+
 h1 {
     font-size: 6rem;
 }
@@ -22,17 +54,140 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    margin: 0 0;
+    margin: 0;
     background: var(--background-colour);
-    font-family: Body; 
     font-size: 1.3rem;
     color: var(--foreground-colour);
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    overflow-x: hidden;
 }
 
 img:not(.noBorder) {
     border-radius: 5%;
-    border: 1px solid black;
+    border: 1px solid;
+}
+
+@font-face {
+    font-family: LightHeader;
+    src: url(fonts/Gilgan.otf);
+}
+
+@font-face {
+    font-family: LightBody;
+    src: url(fonts/Gilgan.otf);
+}
+
+@font-face {
+    font-family: DarkHeader;
+    src: url(fonts/Karst-ExtraBold.otf);
+    size-adjust: 100%;
+}
+
+@font-face {
+    font-family: DarkBody;
+    src: url(fonts/Karst-Light.otf);
+}
+
+[data-theme="light"] {
+    --foreground-colour: rgb(0, 13, 42);
+    --background-colour: rgb(250, 242, 225);
+
+    --accent-colour-1: rgb(85, 9, 9);
+    --text-colour-1: var(--background-colour);
+
+    --accent-colour-2: rgb(127, 33, 12);
+    --text-colour-2: var(--background-colour);
+
+    --accent-colour-3: rgb(213, 140, 91);
+    --text-colour-3: var(--foreground-colour);
+
+    --accent-colour-4: rgb(223, 205, 105);
+    --text-colour-4: var(--foreground-colour);
+
+    --accent-colour-5: rgb(127, 192, 102);
+    --text-colour-5: var(--foreground-colour);
+
+    --accent-colour-6: rgb(110, 110, 110);
+    --text-colour-6: var(--background-colour);
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: LightHeader;
+    }
+
+    body {
+        font-family: LightBody;
+    }
+    
+    a {
+        color: rgb(44, 44, 199);
+    }
+}
+
+[data-theme="dark"] {
+    --foreground-colour: rgb(255, 255, 255);
+    --background-colour: rgb(31, 31, 43);
+
+    --accent-colour-1: rgb(66, 38, 92);
+    --text-colour-1: var(--foreground-colour);
+
+    --accent-colour-2: rgb(10, 46, 145);
+    --text-colour-2: var(--foreground-colour);
+
+    --accent-colour-3: rgb(20, 149, 158);
+    --text-colour-3: var(--foreground-colour);
+
+    --accent-colour-4: rgb(26, 88, 98);
+    --text-colour-4: var(--foreground-colour);
+
+    --accent-colour-5: rgb(0, 129, 75);
+    --text-colour-5: var(--foreground-colour);
+
+    --accent-colour-6: rgb(110, 110, 110);
+    --text-colour-6: var(--foreground-colour);
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        line-height: 120%;
+        font-family: DarkHeader;
+    }
+
+    body {
+        font-family: DarkBody;
+    }
+
+    a {
+        color: rgb(158, 158, 255);
+    }
+
+    p {
+        line-height: 140%;
+    }
+
+    img {
+        border-color: var(--foreground-colour);
+    }
+
+    .dynamicIcon {
+        filter: invert() brightness(0.8);
+    }
+}
+
+@media (max-aspect-ratio: 1/0.8) {
+    header {
+        height: 14%;
+    }
+    
+    #navbar {
+        width: 100%;
+        float: none;
+        height: 50%;
+    }
+
+    #topLine {
+        width: 100%;
+        float: none;
+        height: 50%;
+    }
 }

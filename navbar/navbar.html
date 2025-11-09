@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <base target="_parent">
+        <link rel="stylesheet" href="../common/common.css">
+        <link rel="stylesheet" href="../navbar/navbar.css">
+        <script src="themes.js"></script>
+        <script>
+            (function() {
+                const theme = localStorage.getItem("theme") || "light";
+                document.getElementsByTagName("html")[0].setAttribute("data-theme", theme);
+            })();
+        </script>
+    </head>
+    <body>
+        <div class="headerButton"
+                id="themeButton"
+                onclick="toggleTheme()">
+            <h4>Theme</h4>
+        </div>
+        <a href="/resume">
+            <div class="headerButton" id="resumeButton">
+                <h4>Resume</h4>
+            </div>
+        </a>
+        <a href="/projects">
+            <div class="headerButton" id="projectsButton">
+                <h4>Projects</h4>
+            </div>
+        </a>
+        <a href="/radio">
+            <div class="headerButton" id="radioButton">
+                <h4>Radio</h4>
+            </div>
+        </a>
+        <a href="/about">
+            <div class="headerButton" id="aboutButton">
+                <h4>About</h4>
+            </div>
+        </a>
+        <a href="/blog">
+            <div class="headerButton" id="blogButton">
+                <h4>Blog</h4>
+            </div>
+        </a>
+        <a href="/">
+            <div class="headerButton" id="homeButton">
+                <h4>Home</h4>
+            </div>
+        </a>
+    </body>
+</html>

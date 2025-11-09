@@ -1,0 +1,22 @@
+.bodyContent {
+    top: 6%;
+    height: 94%;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+embed {
+    height: 100%;
+    width: 100%;
+}
+
+#topLine {
+    background: var(--accent-colour-5);
+    color: var(--text-colour-5);
+}
+
+@media (max-aspect-ratio: 1/0.8) {
+    .bodyContent {
+        height: 86%;
+    }
+}

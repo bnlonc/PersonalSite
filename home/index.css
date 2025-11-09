@@ -1,0 +1,36 @@
+.fullWidthBodyContent {
+    text-align: center;
+    position: relative;
+    top: 28%;
+}
+
+#centreText > * {
+    margin-bottom: 0;
+}
+
+h1 {
+    margin-top: 0%;
+}
+
+h2 {
+    margin-top: 0.6%;
+}
+
+h3 {
+    margin-top: 0.8%;
+}
+
+#contactLinks {
+    margin-top: 0.8%;
+}
+
+a {
+    display: inline-block;
+    height: 100%;
+    width: 2.5%;
+    margin: 0.5% 2% 0 2%;
+}
+
+img {
+    width: 100%;
+}

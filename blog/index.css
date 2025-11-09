@@ -1,0 +1,51 @@
+#topLine {
+    background: var(--accent-colour-1);
+    color: var(--text-colour-1);
+}
+
+.bodyContent {
+    position: relative;
+    top: 2%;
+    display: block;
+    overflow: auto;
+    margin: 0 auto;
+    width: 40%;
+    padding-bottom: 50px;
+}
+
+.blogPost {
+    width: 100%;
+    margin-top: 3%;
+    border-radius: 1% / 15%;
+    border: 2px solid;
+    color: var(--foreground-colour);
+    box-sizing: border-box;
+}
+
+.title, .description {
+    margin: 1%;
+}
+
+.rightSide {
+    float: right;
+    white-space: nowrap;
+    height: 100%;
+    margin-right: 2%;
+}
+
+.date {
+    margin-top: 8%;
+    height: 100%;
+    font-style: italic;
+}
+
+a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+@media (max-aspect-ratio: 1/0.8) {
+    .bodyContent {
+        width: 80%;
+    }
+}

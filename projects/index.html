@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
     <head>
         <meta charset="UTF-8">
+        <title>Ben Lonc - Projects</title>
+        <link rel="icon" type="image/x-icon" href="../common/favicon.png">
         <link rel="stylesheet" href="../common/common.css">
-        <link rel="stylesheet" href="projects.css">
+        <link rel="stylesheet" href="index.css">
+        <script>
+            (function() {
+                const theme = localStorage.getItem("theme") || "light";
+                document.getElementsByTagName("html")[0].setAttribute("data-theme", theme);
+            })();
+        </script>
     </head>
     <body>
-        <div id="bodyContent">
+        <header>
+            <div id="topLine">
+                <h2>>$ Ben Lonc / Projects</h2>
+            </div>
+            <iframe id="navbar" src="../navbar/navbar.html"></iframe>
+        </header>
+        <div class="bodyContent">
             <div id="wallpapers" class="galleryContainer">
                 <h3 class="galleryTitle">Dynamic Web-based Wallpapers</h3>
                 <div id="wallpaperGallery" class="gallery">
@@ -42,7 +56,7 @@
                     <div class="projectDisplay">
                         <a href="https://github.com/bnlonc/CSE141L" target="_blank">
                             <img src="images/avernus.png">
-                            <h4>Error-Correction Processor</h4>
+                            <h4>Error-Correction<br>Processor</h4>
                         </a>
                     </div>
                 </div>
