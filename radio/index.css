@@ -16,7 +16,7 @@
 }
 
 #backgroundImage {
-    background: url('images/towers.png'), var(--background-colour);
+    background: url('images/towers.webp'), var(--background-colour);
     background-size: auto 66.5%;
     background-repeat: no-repeat;
     background-position-x: left;

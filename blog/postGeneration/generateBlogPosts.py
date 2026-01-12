@@ -6,9 +6,12 @@ MAIN_PAGE_GENERATION_OUTPUT_DIR = ".."
 POST_GENERATION_OUTPUT_DIR = "../posts"
 
 POST_RELATIVE_URL_PREFIX = "./posts"
+POST_SOURCE_DIR_NAME = "postSources"
 
 MAIN_PAGE_TEMPLATE_FILE_NAME = "mainPageTemplate.html"
 POST_TEMPLATE_FILE_NAME = "blogPostTemplate.html"
+STYLE_PLACEHOLDER = "/*style_placeholder*/"
+STYLE_FRONTMATTER_FIELD = "customStyle"
 CONTENT_PLACEHOLDER = "<!--content_placeholder-->"
 INDEX_FILE_NAME = "index.html"
 
@@ -31,11 +34,11 @@ MAIN_PAGE_ENTRY_TEMPLATE = f"""\
 """
 
 def main():
-    files = os.listdir(".")
+    template_files = filterListForSuffix(os.listdir("."), ".html")
 
-    if POST_TEMPLATE_FILE_NAME not in files:
+    if POST_TEMPLATE_FILE_NAME not in template_files:
         raise FileNotFoundError("Post template file not found!")
-    if MAIN_PAGE_TEMPLATE_FILE_NAME not in files:
+    if MAIN_PAGE_TEMPLATE_FILE_NAME not in template_files:
         raise FileNotFoundError("Main page template file not found!")
 
     file = open(POST_TEMPLATE_FILE_NAME, "r")
@@ -45,7 +48,7 @@ def main():
     main_page_template = file.read()
     file.close()
 
-    markdown_files = list(filter(lambda fileName: fileName.endswith(".md"), files))
+    markdown_files = filterListForSuffix(os.listdir(POST_SOURCE_DIR_NAME), ".md")
     markdown_files.reverse()
 
     main_page_entries = []
@@ -53,7 +56,8 @@ def main():
     for markdown_file_name in markdown_files:
         
         # Read post file and parse as markdown + YAML frontmatter 
-        with open(markdown_file_name, "r") as file:
+        relative_markdown_file_path = "/".join([POST_SOURCE_DIR_NAME, markdown_file_name])
+        with open(relative_markdown_file_path, "r") as file:
             post_object = frontmatter.load(file)
 
         # Generate post content 
@@ -93,6 +97,12 @@ def generate_main_page_entry(post, post_page_name):
 
 def generate_blog_post(post, template):
     html_body = markdown.markdown(post.content)
-    return template.replace(CONTENT_PLACEHOLDER, html_body)
+    post_html = template.replace(CONTENT_PLACEHOLDER, html_body)
+    if (post.get(STYLE_FRONTMATTER_FIELD)):
+        post_html = post_html.replace(STYLE_PLACEHOLDER, post.get(STYLE_FRONTMATTER_FIELD))
+    return post_html
+
+def filterListForSuffix(string_list, suffix):
+    return list(filter(lambda fileName: fileName.endswith(suffix), string_list))
 
 main()
