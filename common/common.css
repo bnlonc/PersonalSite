@@ -71,12 +71,12 @@ img:not(.noBorder) {
 
 @font-face {
     font-family: LightHeader;
-    src: url(fonts/Gilgan.otf);
+    src: url(fonts/Gontserrat-Medium.ttf);
 }
 
 @font-face {
     font-family: LightBody;
-    src: url(fonts/Gilgan.otf);
+    src: url(fonts/Gontserrat-Regular.ttf);
 }
 
 @font-face {
@@ -123,6 +123,10 @@ img:not(.noBorder) {
     a {
         color: rgb(44, 44, 199);
     }
+
+    p {
+        line-height: 160%;
+    }
 }
 
 [data-theme="dark"] {
@@ -162,7 +166,7 @@ img:not(.noBorder) {
     }
 
     p {
-        line-height: 140%;
+        line-height: 170%;
     }
 
     img {
@@ -183,11 +187,20 @@ img:not(.noBorder) {
         width: 100%;
         float: none;
         height: 50%;
+        font-size: 2.65rem; 
     }
 
     #topLine {
         width: 100%;
         float: none;
         height: 50%;
+    }
+
+    h2 {
+        font-size: 4.5rem;
+    }
+
+    p {
+        font-size: 1.8rem;
     }
 }

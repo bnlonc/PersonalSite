@@ -96,3 +96,10 @@ body {
 #themeButton {
     cursor: pointer;
 }
+
+
+@media (max-aspect-ratio: 15/1) {
+    h4 {
+        font-size: 2rem;
+    }
+}
