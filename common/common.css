@@ -178,6 +178,10 @@ img:not(.noBorder) {
     }
 }
 
+code {
+    font-size: 75%;
+}
+
 @media (max-aspect-ratio: 1/0.8) {
     header {
         height: 14%;
@@ -200,7 +204,7 @@ img:not(.noBorder) {
         font-size: 4.5rem;
     }
 
-    p {
+    p, li {
         font-size: 1.8rem;
     }
 }

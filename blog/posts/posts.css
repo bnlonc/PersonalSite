@@ -54,6 +54,11 @@
     padding-bottom: 50px;
 }
 
+li {
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
 @media (max-aspect-ratio: 1/0.8) {
     .bodyContent {
         width: 98%;
