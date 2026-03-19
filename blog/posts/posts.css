@@ -12,15 +12,25 @@
     border: 2px solid var(--foreground-colour);
 }
 
-.buttonLink {
-    text-decoration: none;
-}
-
 .button > * {
     font-size: 1.1em;
     line-height: 1.5em;
     color: var(--text-colour-6);
     margin: 0.3em;
+}
+
+.buttonLink {
+    text-decoration: none;
+}
+
+.bodyContent {
+    position: relative;
+    top: 1%;
+    display: block;
+    overflow: auto;
+    margin: 0 auto;
+    width: 1000px;
+    padding-bottom: 50px;
 }
 
 .postText {
@@ -30,7 +40,7 @@
     overflow: hidden;
 }
 
-.postText > * {
+.postText > *:not(video) {
     text-align: left;
     padding: 0% 4%;
 }
@@ -44,14 +54,17 @@
     font-size: 2em;
 }
 
-.bodyContent {
-    position: relative;
-    top: 1%;
-    display: block;
-    overflow: auto;
-    margin: 0 auto;
-    width: 1000px;
-    padding-bottom: 50px;
+img, video {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.noRadius {
+    border-radius: 0;
+}
+
+.noBorder {
+    border: 0;
 }
 
 li {

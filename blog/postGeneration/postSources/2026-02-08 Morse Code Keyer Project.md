@@ -2,17 +2,6 @@
 title: "DIY Morse Code Keyer Project"
 description: "Walking through my Arduino-powered Morse code keyer"
 date: "2026-02-08"
-customStyle: "
-img, video {
-    width: 70%;
-    margin-left: 15%;
-    padding: 0 !important;
-}
-.diagram {
-    border-radius: 0 !important;
-    border: none !important;
-}
-"
 ---
 ## Morse Code Keyer Project
 Keen-eyed readers will know that I'm a Technician-class amateur radio operator. Right now, my goals in this space are to upgrade to General class and to learn Morse code. Morse code (also called Continuous Wave, or CW) had almost entirely fallen out of commercial and military use by the turn of the 21st century, but it remains a pillar of amateur radio. It persists among hams because it's a rewarding art form in and of itself and it can punch through signal-to-noise ratios that would render most other modes unusable.
@@ -21,7 +10,7 @@ Traditionally, Morse code was transmitted with a straight key. Electrically, a s
 
 These days, most CW operators use an automatic or semi-automatic key. The most common automatic setup for modern hams is a key with two paddles connected to the transmitter through an automatic keyer. In this configuration, holding the left paddle causes the keyer to send a string of dots to the transmitter, and holding the right paddle causes the keyer to send dashes. When both are held, the keyer alternates between dots and dashes.
 
-<video controls src="../../images/2026-02-08/k3%20demo.mp4" alt="LogiKey K3 demo"></video>
+<video controls src="../../images/2026-02-08/k3%20demo.mp4" alt="LogiKey K3 demo" class="noRadius"></video>
 
 The paddle key is still just two momentary switches, electrically speaking, but the automatic keyer has to be there to translate the two paddle inputs into Morse code for the transmitter to send out. 
 
@@ -58,9 +47,13 @@ Before I could start messing around with code, I'd have to make sure everything 
 Whatever. I made a complete mess of that first tin anyways. The holes in the lid for the speaker were pretty gross. My second tin turned out pretty well, and a test fit looked pretty good, so I went ahead with the software. 
 
 ![Tin 2 detail](../../images/2026-02-08/tin2_detail.png)
+
 ![Complete side](../../images/2026-02-08/complete_side.png)
+
 ![Complete end](../../images/2026-02-08/complete_end.png)
+
 ![Complete top](../../images/2026-02-08/complete_top.png)
+
 ![Complete open](../../images/2026-02-08/complete_open.png)
 
 ### The software 
@@ -68,15 +61,15 @@ From the outset, I knew I'd have to use some form of multi-tasking for this proj
 
 The most basic functionality is that a symbol (either a dot or dash) should sound when you push its paddle. If something's already playing, that symbol should be queued behind whatever is currently playing to ensure that the keyer always generates a coherent stream of Morse code symbols. Below is an illustration of the basic behaviour:
 
-<img src="../../images/2026-02-08/fig1.png" class="diagram" alt="Example 1">
+<img src="../../images/2026-02-08/fig1.png" class="noRadius noBorder" alt="Example 1">
 
 When a paddle is held, that symbol should be repeated. After every symbol, there's a space with the same duration as a dot that allows only the opposite symbol as what was just played to be queued. 
 
-<img src="../../images/2026-02-08/fig2.png" class="diagram" alt="Example 2">
+<img src="../../images/2026-02-08/fig2.png" class="noRadius noBorder" alt="Example 2">
 
 When both keys are held down together, the keyer alternates between a dot and a dash, starting with whichever key was pressed first. 
 
-<img src="../../images/2026-02-08/fig3.png" class="diagram" alt="Example 3">
+<img src="../../images/2026-02-08/fig3.png" class="noRadius noBorder" alt="Example 3">
 
 After looking into the timer interrupts supported by the Arduino's Nordic nRF52840, I determined that the hardware interrupt approach was overkill for this project. Instead, I used a simple pseudo-multitasking approach based on the Arduino library's `millis()` function. When called, that function just returns the number of milliseconds that have passed since the microcontroller was powered on. It may not seem useful at first glance, so here's a simple example of how you use this to create a multitasking-like structure. 
 
@@ -195,7 +188,7 @@ In addition to the main file, the code is broken up into four C++ classes:
 
 The dependency tree forms a DAG as follows: 
 
-<img src="../../images/2026-02-08/dag.png" class="diagram" alt="Dependency tree">
+<img src="../../images/2026-02-08/dag.png" class="noRadius noBorder" alt="Dependency tree">
 
 [The full source code for this project can be found here](https://github.com/bnlonc/MintKeyer). 
 
@@ -215,23 +208,23 @@ Aside from the paddle itself, I deliberately chose to limit the device to only o
 
 First, the basic functionality. When I turn the keyer on, the first thing it does is send "--- -.-" or "OK" so that I know it initialized correctly. You can hear how the dot and dash paddles work, both independently and at the same time. You can also hear that the volume knob changes the output volume. 
 
-<video controls src="../../images/2026-02-08/basic%20demo.mp4" alt="Basic demo"></video>
+<video controls src="../../images/2026-02-08/basic%20demo.mp4" alt="Basic demo" class="noRadius"></video>
 
 Next, the configuration. In this first video, I push the config button on the side and get a rising major arpeggio to indicate that the keyer is now listening for a command. First, I send "--.- -" or "QT", to query the current tone pitch. The keyer responds "--... ....- -----" or "740" to tell me that the current output is at 740Hz. A descending major arpeggio indicates that the operation was successful. After that, I enter config mode again and send "T54", which changes the tone pitch to 540Hz. You'll note that the config exit tone changes along with the output tone. I did this just for fun to show that you can derive the pitches of a root note and perfect fifth from a given major third by just multiplying by constant factors. See `MorseOutput.cpp` for details. 
 
-<video controls src="../../images/2026-02-08/tone%20demo.mp4" alt="Tone demo"></video>
+<video controls src="../../images/2026-02-08/tone%20demo.mp4" alt="Tone demo" class="noRadius"></video>
 
 Here, I do the same thing for speed. I query for the current speed ("QS") and get "15" as a response, meaning the keyer is currently doing input and output at 15 words per minute. I then give the command "S20" to set the current speed to 20 WPM. 
 
-<video controls src="../../images/2026-02-08/speed%20demo.mp4" alt="Speed demo"></video>
+<video controls src="../../images/2026-02-08/speed%20demo.mp4" alt="Speed demo" class="noRadius"></video>
 
 Finally, I demonstrate how you can quickly exit config mode by pushing the config button again, and reset your tone and speed settings to the default by holding the config button down for five seconds: 
 
-<video controls src="../../images/2026-02-08/config%20demo.mp4" alt="Config demo"></video>
+<video controls src="../../images/2026-02-08/config%20demo.mp4" alt="Config demo" class="noRadius"></video>
 
 ### Conclusion 
 
-This was a fun little side project. The finished product is a nice little desk toy if nothing else, and it should have me practicing the code more, if only due to creator bias. If I were to do it again, the first thing I'd change would be the process I used for physical construction. I'd definitely make sure to work more carefully with the CA glue I used to avoid getting that white residue everywhere as it dried. I'd also spend the $15 on a set of Dremel drill bits sooner, as I wasted a good amount of time trying to cut holes in the tins with the grinding bits I already had. 
+This was a fun little side project. The finished product is a nice desk toy if nothing else, and it should have me practicing the code more, if only due to creator bias. If I were to do it again, the first thing I'd change would be the process I used for physical construction. I'd definitely make sure to work more carefully with the CA glue I used to avoid getting that white residue everywhere as it dried. I'd also spend the $15 on a set of Dremel drill bits sooner, as I wasted a good amount of time trying to cut holes in the tins with the grinding bits I already had. 
 
 Ultimately, I think the project was a success, as I was happy enough with it to sell my old keyer to another ham after it was all said and done. 
 

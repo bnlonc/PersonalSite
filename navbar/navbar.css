@@ -98,7 +98,7 @@ body {
 }
 
 
-@media (max-aspect-ratio: 15/1) {
+@media (min-width: 950px) {
     h4 {
         font-size: 2rem;
     }

@@ -14,7 +14,7 @@
             })();
         </script>
         <style>
-             img, video { width: 70%; margin-left: 15%; padding: 0 !important; } .diagram { border-radius: 0 !important; border: none !important; } 
+            /*style_placeholder*/
         </style>
     </head>
     <body>
@@ -35,7 +35,7 @@
 <p>Keen-eyed readers will know that I'm a Technician-class amateur radio operator. Right now, my goals in this space are to upgrade to General class and to learn Morse code. Morse code (also called Continuous Wave, or CW) had almost entirely fallen out of commercial and military use by the turn of the 21st century, but it remains a pillar of amateur radio. It persists among hams because it's a rewarding art form in and of itself and it can punch through signal-to-noise ratios that would render most other modes unusable.</p>
 <p>Traditionally, Morse code was transmitted with a straight key. Electrically, a straight key is just a momentary switch. When you press the key down, the circuit closes, and the transmitter starts sending a tone down the line or through the air. When you release the key, the circuit opens and the tone stops. It's a dead simple setup, and it just works. However, it takes a lot of practice to get all of the timing and spacing just right, as you're in charge of producing all aspects of the code yourself. An amateur can typically only get to around 20 words per minute (WPM) on a straight key.</p>
 <p>These days, most CW operators use an automatic or semi-automatic key. The most common automatic setup for modern hams is a key with two paddles connected to the transmitter through an automatic keyer. In this configuration, holding the left paddle causes the keyer to send a string of dots to the transmitter, and holding the right paddle causes the keyer to send dashes. When both are held, the keyer alternates between dots and dashes.</p>
-<video controls src="../../images/2026-02-08/k3%20demo.mp4" alt="LogiKey K3 demo"></video>
+<video controls src="../../images/2026-02-08/k3%20demo.mp4" alt="LogiKey K3 demo" class="noRadius"></video>
 
 <p>The paddle key is still just two momentary switches, electrically speaking, but the automatic keyer has to be there to translate the two paddle inputs into Morse code for the transmitter to send out. </p>
 <p>When I was first getting into CW, I bought a Logikey K3 keyer to practice with, but it's pretty clunky. For starters, it requires an external 12V power supply and doesn't have a power switch or volume knob. After thinking about it for a while, I eventually got tired of plugging it in every time I wanted to use it, so I decided to just build my own keyer.</p>
@@ -59,19 +59,19 @@
 <p><img alt="Tin 1 side view" src="../../images/2026-02-08/tin1_side.png" /></p>
 <p><img alt="Tin 1 top view" src="../../images/2026-02-08/tin1_top.png" /></p>
 <p>Whatever. I made a complete mess of that first tin anyways. The holes in the lid for the speaker were pretty gross. My second tin turned out pretty well, and a test fit looked pretty good, so I went ahead with the software. </p>
-<p><img alt="Tin 2 detail" src="../../images/2026-02-08/tin2_detail.png" />
-<img alt="Complete side" src="../../images/2026-02-08/complete_side.png" />
-<img alt="Complete end" src="../../images/2026-02-08/complete_end.png" />
-<img alt="Complete top" src="../../images/2026-02-08/complete_top.png" />
-<img alt="Complete open" src="../../images/2026-02-08/complete_open.png" /></p>
+<p><img alt="Tin 2 detail" src="../../images/2026-02-08/tin2_detail.png" /></p>
+<p><img alt="Complete side" src="../../images/2026-02-08/complete_side.png" /></p>
+<p><img alt="Complete end" src="../../images/2026-02-08/complete_end.png" /></p>
+<p><img alt="Complete top" src="../../images/2026-02-08/complete_top.png" /></p>
+<p><img alt="Complete open" src="../../images/2026-02-08/complete_open.png" /></p>
 <h3>The software</h3>
 <p>From the outset, I knew I'd have to use some form of multi-tasking for this project. This is because I'd need to track and update the state of the program while simultaneously coordinating the audio output. Here are some examples of the main behaviours that the code would have to implement. </p>
 <p>The most basic functionality is that a symbol (either a dot or dash) should sound when you push its paddle. If something's already playing, that symbol should be queued behind whatever is currently playing to ensure that the keyer always generates a coherent stream of Morse code symbols. Below is an illustration of the basic behaviour:</p>
-<p><img src="../../images/2026-02-08/fig1.png" class="diagram" alt="Example 1"></p>
+<p><img src="../../images/2026-02-08/fig1.png" class="noRadius noBorder" alt="Example 1"></p>
 <p>When a paddle is held, that symbol should be repeated. After every symbol, there's a space with the same duration as a dot that allows only the opposite symbol as what was just played to be queued. </p>
-<p><img src="../../images/2026-02-08/fig2.png" class="diagram" alt="Example 2"></p>
+<p><img src="../../images/2026-02-08/fig2.png" class="noRadius noBorder" alt="Example 2"></p>
 <p>When both keys are held down together, the keyer alternates between a dot and a dash, starting with whichever key was pressed first. </p>
-<p><img src="../../images/2026-02-08/fig3.png" class="diagram" alt="Example 3"></p>
+<p><img src="../../images/2026-02-08/fig3.png" class="noRadius noBorder" alt="Example 3"></p>
 <p>After looking into the timer interrupts supported by the Arduino's Nordic nRF52840, I determined that the hardware interrupt approach was overkill for this project. Instead, I used a simple pseudo-multitasking approach based on the Arduino library's <code>millis()</code> function. When called, that function just returns the number of milliseconds that have passed since the microcontroller was powered on. It may not seem useful at first glance, so here's a simple example of how you use this to create a multitasking-like structure. </p>
 <p>Imagine that you want the Arduino to blink an LED on and off every second while simultaneously sounding a buzzer whenever a button is held down. Start with the naive approach for blinking the LED: </p>
 <pre><code>void blinkLed() {    
@@ -179,7 +179,7 @@ void loop() {
 <li><code>MorseUtils</code> contains general-purpose utility methods for character encoding, decoding, and data conversion. </li>
 </ol>
 <p>The dependency tree forms a DAG as follows: </p>
-<p><img src="../../images/2026-02-08/dag.png" class="diagram" alt="Dependency tree"></p>
+<p><img src="../../images/2026-02-08/dag.png" class="noRadius noBorder" alt="Dependency tree"></p>
 <p><a href="https://github.com/bnlonc/MintKeyer">The full source code for this project can be found here</a>. </p>
 <h3>User interface</h3>
 <p>If you look at the case, you'll see openings for the following: </p>
@@ -193,19 +193,19 @@ void loop() {
 <p>Aside from the paddle itself, I deliberately chose to limit the device to only one button for user input. This is because I wanted the keyer configuration to work like the LogiKey K3, where you send Morse code to issue commands to the keyer. I implemented a very small subset of the K3's functionality: a single button (the side button) controls the config mode, and there are three commands. Sending "S" followed by one or two digits sets the output speed in words per minute. Sending "T" sets the output tone pitch in increments of 10 Hz -- T54 sets it to 540 Hz, for example. Finally, sending "Q" followed by either "S" or "T" allows you to query the speed and tone, respectively, with the keyer sounding out the answer to your query in Morse code. </p>
 <h3>So, how's the finished product?</h3>
 <p>First, the basic functionality. When I turn the keyer on, the first thing it does is send "--- -.-" or "OK" so that I know it initialized correctly. You can hear how the dot and dash paddles work, both independently and at the same time. You can also hear that the volume knob changes the output volume. </p>
-<video controls src="../../images/2026-02-08/basic%20demo.mp4" alt="Basic demo"></video>
+<video controls src="../../images/2026-02-08/basic%20demo.mp4" alt="Basic demo" class="noRadius"></video>
 
 <p>Next, the configuration. In this first video, I push the config button on the side and get a rising major arpeggio to indicate that the keyer is now listening for a command. First, I send "--.- -" or "QT", to query the current tone pitch. The keyer responds "--... ....- -----" or "740" to tell me that the current output is at 740Hz. A descending major arpeggio indicates that the operation was successful. After that, I enter config mode again and send "T54", which changes the tone pitch to 540Hz. You'll note that the config exit tone changes along with the output tone. I did this just for fun to show that you can derive the pitches of a root note and perfect fifth from a given major third by just multiplying by constant factors. See <code>MorseOutput.cpp</code> for details. </p>
-<video controls src="../../images/2026-02-08/tone%20demo.mp4" alt="Tone demo"></video>
+<video controls src="../../images/2026-02-08/tone%20demo.mp4" alt="Tone demo" class="noRadius"></video>
 
 <p>Here, I do the same thing for speed. I query for the current speed ("QS") and get "15" as a response, meaning the keyer is currently doing input and output at 15 words per minute. I then give the command "S20" to set the current speed to 20 WPM. </p>
-<video controls src="../../images/2026-02-08/speed%20demo.mp4" alt="Speed demo"></video>
+<video controls src="../../images/2026-02-08/speed%20demo.mp4" alt="Speed demo" class="noRadius"></video>
 
 <p>Finally, I demonstrate how you can quickly exit config mode by pushing the config button again, and reset your tone and speed settings to the default by holding the config button down for five seconds: </p>
-<video controls src="../../images/2026-02-08/config%20demo.mp4" alt="Config demo"></video>
+<video controls src="../../images/2026-02-08/config%20demo.mp4" alt="Config demo" class="noRadius"></video>
 
 <h3>Conclusion</h3>
-<p>This was a fun little side project. The finished product is a nice little desk toy if nothing else, and it should have me practicing the code more, if only due to creator bias. If I were to do it again, the first thing I'd change would be the process I used for physical construction. I'd definitely make sure to work more carefully with the CA glue I used to avoid getting that white residue everywhere as it dried. I'd also spend the $15 on a set of Dremel drill bits sooner, as I wasted a good amount of time trying to cut holes in the tins with the grinding bits I already had. </p>
+<p>This was a fun little side project. The finished product is a nice desk toy if nothing else, and it should have me practicing the code more, if only due to creator bias. If I were to do it again, the first thing I'd change would be the process I used for physical construction. I'd definitely make sure to work more carefully with the CA glue I used to avoid getting that white residue everywhere as it dried. I'd also spend the $15 on a set of Dremel drill bits sooner, as I wasted a good amount of time trying to cut holes in the tins with the grinding bits I already had. </p>
 <p>Ultimately, I think the project was a success, as I was happy enough with it to sell my old keyer to another ham after it was all said and done. </p>
 <p>Stay tuned for the satellite radio project I promised :)</p>
             </div>

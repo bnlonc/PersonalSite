@@ -64,9 +64,12 @@ body {
     overflow-x: hidden;
 }
 
-img:not(.noBorder) {
-    border-radius: 5%;
+img:not(.noBorder), video:not(.noBorder) {
     border: 1px solid;
+}
+
+img:not(.noRadius), video:not(.noRadius) {
+    border-radius: 5%;
 }
 
 @font-face {
@@ -179,7 +182,7 @@ img:not(.noBorder) {
 }
 
 code {
-    font-size: 75%;
+    font-size: 85%;
 }
 
 @media (max-aspect-ratio: 1/0.8) {

@@ -2,22 +2,15 @@
 title: "From the Archives: Receiving NOAA Weather Satellite Images"
 description: "Paying tribute to the legacy POES fleet"
 date: "2026-01-11"
-customStyle: "
-img {
-    width: 70%;
-    margin-left: 15%;
-    border-radius: 0 !important;
-}
-"
 ---
 ## From the Archives: Receiving NOAA Weather Satellite Images
 In 2023, while living with my dad in South Carolina, I came across the YouTube video that would eventually send me hurtling down the radio rabbit hole, never to return. That video was [saveitforparts' *How To Get Live Satellite Images Directly From Space*](https://www.youtube.com/watch?v=icADyjm3PBE). I had some inkling that there was something interesting to be pulled from the airwaves that go (literally) over our heads each day, but I was surprised to learn that I could pull live satellite images from my backyard with less than $50 in equipment. I went ahead and picked up an RTL-SDR as mentioned in the video and started tracking satellite passes using the excellent tools at [n2yo.com](n2yo.com). Soon enough, my dad was (understandably) asking some questions about what I was doing with a laptop and a pair of rabbit ears in the backyard at 12:45 AM. Questions aside, the results I got were actually pretty solid given I had no idea what I was doing:
 
-![Satellite image 1](../../images/2026-01-11/NOAA 19 2023-10-15.jpg)
+<img alt="Satellite image 1" src="../../images/2026-01-11/NOAA 19 2023-10-15.jpg" class="noRadius">
 
 Other images weren't quite as clean, but still very recognizable: 
 
-![Satellite image 2](../../images/2026-01-11/NOAA 18 2023-10-16.jpg)
+<img alt="Satellite image 2" src="../../images/2026-01-11/NOAA 18 2023-10-16.jpg" class="noRadius">
 
 Ever since I picked up that first SDR, I've been involved in the radio hobby in some way or another. This has led me to getting my Technician license, experimenting with HF, learning Morse code, and engineering around the constraints of living in an apartment. Funnily enough, that first satellite decoding project was probably the easiest one of my radio projects to label as "successful." That's mostly because my recent work has been more educated screwing around and experimenting ("let's see what this big indoor dipole can pick up!") than structured projects with well-defined end goals. If your success criteria include having fun and learning stuff, you could say my track record has been pretty good so far!
 
