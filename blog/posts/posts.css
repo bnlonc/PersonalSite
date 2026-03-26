@@ -72,6 +72,10 @@ li {
     margin-left: 3%;
 }
 
+blockquote > p {
+    text-align: center;
+}
+
 @media (max-aspect-ratio: 1/0.8) {
     .bodyContent {
         width: 98%;
