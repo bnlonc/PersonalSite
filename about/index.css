@@ -39,12 +39,12 @@ li {
 }
 
 #topSection > .bodyText {
-    width: 70%;
+    width: 65%;
     float: right;
 }
 
 #topSection > .bodyImages {
-    width: 25%;
+    width: 30%;
     float: left;
 }
 
