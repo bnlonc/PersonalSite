@@ -1,23 +1,6 @@
-[data-theme="light"] {
-    #topLine {
-        background: var(--accent-colour-4);
-        color: var(--text-colour-4);
-    }
-    
-    h4 {
-        font-family: LightBody;
-    }
-}
-
-[data-theme="dark"] {
-    #topLine {
-        background: var(--accent-colour-4);
-        color: var(--text-colour-4);
-    }
-    
-    h4 {
-        font-family: DarkBody;
-    }
+#topLine {
+    background: var(--accent-colour-4);
+    color: var(--text-colour-4);
 }
 
 .bodyContent {
@@ -35,7 +18,7 @@
 }
 
 .galleryTitle {
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .projectDisplay {
@@ -51,8 +34,9 @@ a:hover {
     letter-spacing: 2px;
 }
 
-h4 {
+h5 {
     color: var(--foreground-colour);
+    margin-top: 2%;
 }
 
 a {
