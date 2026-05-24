@@ -1,6 +1,15 @@
 import frontmatter
 import markdown
 import os
+import shutil
+
+from pathlib import Path
+
+# Do not execute this script manually. Use generate.sh to run it instead. This guarantees it
+# runs in the right directory and uses the right virtual environment.
+
+script_dir = Path(__file__).parent.resolve()
+os.chdir(script_dir)
 
 MAIN_PAGE_GENERATION_OUTPUT_DIR = ".."
 POST_GENERATION_OUTPUT_DIR = "../posts"
@@ -34,6 +43,10 @@ MAIN_PAGE_ENTRY_TEMPLATE = f"""\
 """
 
 def main():
+    # Remove old posts directory
+    shutil.rmtree(POST_GENERATION_OUTPUT_DIR)
+
+    # Load templates
     template_files = filterListForSuffix(os.listdir("."), ".html")
 
     if POST_TEMPLATE_FILE_NAME not in template_files:
@@ -48,6 +61,7 @@ def main():
     main_page_template = file.read()
     file.close()
 
+    # Load post content
     markdown_files = filterListForSuffix(os.listdir(POST_SOURCE_DIR_NAME), ".md")
     markdown_files.reverse()
 
