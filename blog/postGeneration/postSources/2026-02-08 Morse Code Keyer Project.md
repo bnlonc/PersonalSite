@@ -18,6 +18,7 @@ When I was first getting into CW, I bought a Logikey K3 keyer to practice with, 
 
 ### The requirements
 I wanted to build a keyer that did all of the following:
+
 - Supports iambic keying as I'm used to on the K3
 - Smaller in size than the K3
 - Has a power switch
